@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+<body>
+    <label for="search">Search here:</label>
+    <input type="text" id="search"> </input>
+    <button>Search</button>
+    <p></p>
+</body>
+<script>
+let data=['win: 12345','htut:3456','vij:@#@$$','jslyu:2222'];
+let para = document.querySelector('p');
+let input = document.querySelector('input');
+let button = document.querySelector('button');
+button.addEventListener('click',function(){ 
+let SearchData = input.value.toLowerCase();
+for ( let i=0; i <data.length ; i++ ){
+    let splitContact=data[i].split(':');
+    //splitContact='win','12345'
+    if(splitContact[0].toLowerCase()===SearchData){
+        para.textContent=splitContact[0]+'Number is'+splitContact[1];
+        break;
+    }
+    if (i===data.length-1){
+         para.textContent= SearchData+'Is not found!';
+    }
+    }
+});
+</script>
+</html>

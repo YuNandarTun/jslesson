@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snackshop</title>
+</head>
+<body>
+    <label for="food">Please select your food.</label>
+    <select id="to eat">
+        <option value="">Please select here.</option>
+        <option value="coffee"> Coffee</option>
+        <option value="tea">Tea</option>
+        <option value="bubble Tea">Bubble Tea</option>
+        <option value="milk">milk</option>
+    </select>
+    <label for="count">Quantity</label>
+    <input type="number" id="count" name="count number"
+    value="0" min="1" max="10">
+    <p></p>
+    <h3></h3>
+</body>
+<script>
+    let select=document.querySelector('select');
+    let paragraph=document.querySelector('p');
+    let number=document.querySelector('input');
+    let h3=document.querySelector('h3');
+    select.addEventListener('change',food);
+function food(){
+    let choosen=select.value;
+    switch(choosen){
+        case 'coffee':
+        paragraph.textContent= choosen+"is so cool";
+        h3.textContent='quantity is'+ number.value;
+        break;
+        case 'tea':
+        paragraph.textContent= choosen+"is so cool";
+        h3.textContent='quantity is'+ number.value;
+        break;
+        case 'bubble tea':
+        paragraph.textContent= choosen+"is so cool";
+        h3.textContent='quantity is'+ number.value;
+        break;
+        case 'milk':
+        paragraph.textContent= choosen+"is so cool";
+        h3.textContent='quantity is'+ number.value;
+        break;
+
+
+        default:
+        paragraph.textContent= "This is from default";
+    }
+}
+</script>
+
+</html>

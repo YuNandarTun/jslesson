@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modernshop</title>
+</head>
+<body>
+    <h1>Modernshop</h1>
+    <h3></h3>
+</body>
+<script>
+    let name=window.prompt("Enter your choose: Noodle or Coffee");
+    alert("You have choosen"+name);
+    let h3=document.querySelector('h3');
+    if(name==='noodle'){
+        let noodleType=window.prompt("normal or special");
+        if(noodleType==='normal'){
+            h3.textContent='Normal Noodle';
+        }else if (noodleType==='special'){
+            window.location.href="8-2spcustomer.html";
+        }else{
+            h3.textContent='VIP customer';
+        }
+    }else{
+        h3.textContent='Coffee';
+    }
+</script>
+</html>
